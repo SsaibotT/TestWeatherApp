@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A77C3D2B70212600435DF5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C3C2B70212600435DF5 /* Coordinator.swift */; };
+		37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C3E2B70214B00435DF5 /* MainCoordinator.swift */; };
+		37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C402B7021E700435DF5 /* SearchCityViewController.swift */; };
 		37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8470E2B6FC04100AE4623 /* AppDelegate.swift */; };
 		37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847102B6FC04100AE4623 /* SceneDelegate.swift */; };
-		37A847132B6FC04100AE4623 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847122B6FC04100AE4623 /* ViewController.swift */; };
-		37A847162B6FC04100AE4623 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A847142B6FC04100AE4623 /* Main.storyboard */; };
 		37A847182B6FC04300AE4623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A847172B6FC04300AE4623 /* Assets.xcassets */; };
 		37A8471B2B6FC04300AE4623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A847192B6FC04300AE4623 /* LaunchScreen.storyboard */; };
 		37A847262B6FC04300AE4623 /* EmpikTestWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847252B6FC04300AE4623 /* EmpikTestWeatherAppTests.swift */; };
@@ -39,11 +40,12 @@
 /* Begin PBXFileReference section */
 		0405A1D71D3926B65718EA40 /* Pods_EmpikTestWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmpikTestWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D164A9735A48DFCE5FCB83 /* Pods-EmpikTestWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmpikTestWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-EmpikTestWeatherApp/Pods-EmpikTestWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		37A77C3C2B70212600435DF5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		37A77C3E2B70214B00435DF5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		37A77C402B7021E700435DF5 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
 		37A8470B2B6FC04100AE4623 /* EmpikTestWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpikTestWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A8470E2B6FC04100AE4623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A847102B6FC04100AE4623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37A847122B6FC04100AE4623 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		37A847152B6FC04100AE4623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37A847172B6FC04300AE4623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37A8471A2B6FC04300AE4623 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A8471C2B6FC04300AE4623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +92,42 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		37A77C422B70271200435DF5 /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				37A8470E2B6FC04100AE4623 /* AppDelegate.swift */,
+				37A847102B6FC04100AE4623 /* SceneDelegate.swift */,
+				37A847172B6FC04300AE4623 /* Assets.xcassets */,
+				37A847192B6FC04300AE4623 /* LaunchScreen.storyboard */,
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		37A77C432B70272A00435DF5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C442B70273100435DF5 /* SearchCity */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		37A77C442B70273100435DF5 /* SearchCity */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C402B7021E700435DF5 /* SearchCityViewController.swift */,
+			);
+			path = SearchCity;
+			sourceTree = "<group>";
+		};
+		37A77C452B70274300435DF5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C3C2B70212600435DF5 /* Coordinator.swift */,
+				37A77C3E2B70214B00435DF5 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		37A847022B6FC04100AE4623 = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +153,9 @@
 		37A8470D2B6FC04100AE4623 /* EmpikTestWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				37A8470E2B6FC04100AE4623 /* AppDelegate.swift */,
-				37A847102B6FC04100AE4623 /* SceneDelegate.swift */,
-				37A847122B6FC04100AE4623 /* ViewController.swift */,
-				37A847142B6FC04100AE4623 /* Main.storyboard */,
-				37A847172B6FC04300AE4623 /* Assets.xcassets */,
-				37A847192B6FC04300AE4623 /* LaunchScreen.storyboard */,
+				37A77C452B70274300435DF5 /* Coordinator */,
+				37A77C432B70272A00435DF5 /* Presentation */,
+				37A77C422B70271200435DF5 /* AppConfiguration */,
 				37A8471C2B6FC04300AE4623 /* Info.plist */,
 			);
 			path = EmpikTestWeatherApp;
@@ -259,7 +294,6 @@
 			files = (
 				37A8471B2B6FC04300AE4623 /* LaunchScreen.storyboard in Resources */,
 				37A847182B6FC04300AE4623 /* Assets.xcassets in Resources */,
-				37A847162B6FC04100AE4623 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,9 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A847132B6FC04100AE4623 /* ViewController.swift in Sources */,
 				37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */,
+				37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */,
+				37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */,
 				37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */,
+				37A77C3D2B70212600435DF5 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,14 +401,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		37A847142B6FC04100AE4623 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				37A847152B6FC04100AE4623 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		37A847192B6FC04300AE4623 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -515,7 +543,7 @@
 				INFOPLIST_FILE = EmpikTestWeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -544,7 +572,7 @@
 				INFOPLIST_FILE = EmpikTestWeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
