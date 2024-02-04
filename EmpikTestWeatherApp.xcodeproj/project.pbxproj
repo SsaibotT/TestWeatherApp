@@ -10,6 +10,7 @@
 		37A77C3D2B70212600435DF5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C3C2B70212600435DF5 /* Coordinator.swift */; };
 		37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C3E2B70214B00435DF5 /* MainCoordinator.swift */; };
 		37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C402B7021E700435DF5 /* SearchCityViewController.swift */; };
+		37A77C4A2B702A9000435DF5 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C492B702A9000435DF5 /* Injection.swift */; };
 		37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8470E2B6FC04100AE4623 /* AppDelegate.swift */; };
 		37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847102B6FC04100AE4623 /* SceneDelegate.swift */; };
 		37A847182B6FC04300AE4623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A847172B6FC04300AE4623 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		37A77C3C2B70212600435DF5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		37A77C3E2B70214B00435DF5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		37A77C402B7021E700435DF5 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
+		37A77C492B702A9000435DF5 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		37A8470B2B6FC04100AE4623 /* EmpikTestWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpikTestWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A8470E2B6FC04100AE4623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A847102B6FC04100AE4623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		37A77C482B702A1600435DF5 /* Swinject */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C492B702A9000435DF5 /* Injection.swift */,
+			);
+			path = Swinject;
+			sourceTree = "<group>";
+		};
 		37A847022B6FC04100AE4623 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		37A8470D2B6FC04100AE4623 /* EmpikTestWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				37A77C482B702A1600435DF5 /* Swinject */,
 				37A77C452B70274300435DF5 /* Coordinator */,
 				37A77C432B70272A00435DF5 /* Presentation */,
 				37A77C422B70271200435DF5 /* AppConfiguration */,
@@ -363,6 +374,7 @@
 				37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */,
 				37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */,
 				37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */,
+				37A77C4A2B702A9000435DF5 /* Injection.swift in Sources */,
 				37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */,
 				37A77C3D2B70212600435DF5 /* Coordinator.swift in Sources */,
 			);
