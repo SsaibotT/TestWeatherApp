@@ -20,8 +20,18 @@
 		37A77C5E2B70316600435DF5 /* RequestParamsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C5D2B70316600435DF5 /* RequestParamsKeys.swift */; };
 		37A77C602B70320C00435DF5 /* DailyForecastParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C5F2B70320C00435DF5 /* DailyForecastParams.swift */; };
 		37A77C622B7034A700435DF5 /* LanguageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C612B7034A700435DF5 /* LanguageKeys.swift */; };
-		37A77C652B70374C00435DF5 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C642B70374C00435DF5 /* ApiService.swift */; };
+		37A77C652B70374C00435DF5 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C642B70374C00435DF5 /* ApiClient.swift */; };
 		37A77C672B70385700435DF5 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C662B70385700435DF5 /* ApiResponse.swift */; };
+		37A77C6A2B711FDE00435DF5 /* DataResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C692B711FDE00435DF5 /* DataResultService.swift */; };
+		37A77C6C2B71203F00435DF5 /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C6B2B71203F00435DF5 /* DataResult.swift */; };
+		37A77C6F2B71234000435DF5 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C6E2B71234000435DF5 /* ForecastRepository.swift */; };
+		37A77C722B71273E00435DF5 /* HourlyForecastRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C712B71273E00435DF5 /* HourlyForecastRemote.swift */; };
+		37A77C762B71359800435DF5 /* HourlyForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C752B71359800435DF5 /* HourlyForecastService.swift */; };
+		37A77C7B2B7136EC00435DF5 /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C7A2B7136EC00435DF5 /* HourlyForecast.swift */; };
+		37A77C7D2B71452300435DF5 /* HourlyForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C7C2B71452300435DF5 /* HourlyForecastUseCase.swift */; };
+		37A77C7F2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C7E2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift */; };
+		37A77C812B7156AE00435DF5 /* ForecastRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C802B7156AE00435DF5 /* ForecastRepositoryProtocol.swift */; };
+		37A77C852B71574400435DF5 /* HourlyForecastServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C842B71574400435DF5 /* HourlyForecastServiceProtocol.swift */; };
 		37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8470E2B6FC04100AE4623 /* AppDelegate.swift */; };
 		37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847102B6FC04100AE4623 /* SceneDelegate.swift */; };
 		37A847182B6FC04300AE4623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A847172B6FC04300AE4623 /* Assets.xcassets */; };
@@ -65,8 +75,18 @@
 		37A77C5D2B70316600435DF5 /* RequestParamsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParamsKeys.swift; sourceTree = "<group>"; };
 		37A77C5F2B70320C00435DF5 /* DailyForecastParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastParams.swift; sourceTree = "<group>"; };
 		37A77C612B7034A700435DF5 /* LanguageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageKeys.swift; sourceTree = "<group>"; };
-		37A77C642B70374C00435DF5 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		37A77C642B70374C00435DF5 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		37A77C662B70385700435DF5 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		37A77C692B711FDE00435DF5 /* DataResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResultService.swift; sourceTree = "<group>"; };
+		37A77C6B2B71203F00435DF5 /* DataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
+		37A77C6E2B71234000435DF5 /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
+		37A77C712B71273E00435DF5 /* HourlyForecastRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastRemote.swift; sourceTree = "<group>"; };
+		37A77C752B71359800435DF5 /* HourlyForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastService.swift; sourceTree = "<group>"; };
+		37A77C7A2B7136EC00435DF5 /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
+		37A77C7C2B71452300435DF5 /* HourlyForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastUseCase.swift; sourceTree = "<group>"; };
+		37A77C7E2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastUseCaseProtocol.swift; sourceTree = "<group>"; };
+		37A77C802B7156AE00435DF5 /* ForecastRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryProtocol.swift; sourceTree = "<group>"; };
+		37A77C842B71574400435DF5 /* HourlyForecastServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastServiceProtocol.swift; sourceTree = "<group>"; };
 		37A8470B2B6FC04100AE4623 /* EmpikTestWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpikTestWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A8470E2B6FC04100AE4623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A847102B6FC04100AE4623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +183,8 @@
 		37A77C4D2B702EBE00435DF5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				37A77C632B70373D00435DF5 /* Service */,
+				37A77C732B71352C00435DF5 /* DataService */,
+				37A77C632B70373D00435DF5 /* ApiClient */,
 				37A77C5A2B7030B600435DF5 /* RequestParams */,
 				37A77C4E2B702ED300435DF5 /* Helpers */,
 			);
@@ -193,13 +214,93 @@
 			path = RequestParams;
 			sourceTree = "<group>";
 		};
-		37A77C632B70373D00435DF5 /* Service */ = {
+		37A77C632B70373D00435DF5 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
-				37A77C642B70374C00435DF5 /* ApiService.swift */,
+				37A77C642B70374C00435DF5 /* ApiClient.swift */,
 				37A77C662B70385700435DF5 /* ApiResponse.swift */,
 			);
-			path = Service;
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		37A77C682B71160300435DF5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C6D2B7122E800435DF5 /* Forecast */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		37A77C6D2B7122E800435DF5 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C802B7156AE00435DF5 /* ForecastRepositoryProtocol.swift */,
+				37A77C6E2B71234000435DF5 /* ForecastRepository.swift */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		37A77C702B71272B00435DF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C712B71273E00435DF5 /* HourlyForecastRemote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37A77C732B71352C00435DF5 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C742B71358300435DF5 /* Forecast */,
+				37A77C692B711FDE00435DF5 /* DataResultService.swift */,
+				37A77C6B2B71203F00435DF5 /* DataResult.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		37A77C742B71358300435DF5 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C842B71574400435DF5 /* HourlyForecastServiceProtocol.swift */,
+				37A77C752B71359800435DF5 /* HourlyForecastService.swift */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		37A77C772B7136A700435DF5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C782B7136C500435DF5 /* UseCase */,
+				37A77C792B7136CA00435DF5 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		37A77C782B7136C500435DF5 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C7E2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift */,
+				37A77C7C2B71452300435DF5 /* HourlyForecastUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		37A77C792B7136CA00435DF5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C7A2B7136EC00435DF5 /* HourlyForecast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37A77C822B7156DF00435DF5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C4D2B702EBE00435DF5 /* Networking */,
+				37A77C682B71160300435DF5 /* Repository */,
+				37A77C702B71272B00435DF5 /* Models */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		37A847022B6FC04100AE4623 = {
@@ -227,7 +328,8 @@
 		37A8470D2B6FC04100AE4623 /* EmpikTestWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				37A77C4D2B702EBE00435DF5 /* Networking */,
+				37A77C822B7156DF00435DF5 /* Data */,
+				37A77C772B7136A700435DF5 /* Domain */,
 				37A77C482B702A1600435DF5 /* Swinject */,
 				37A77C452B70274300435DF5 /* Coordinator */,
 				37A77C432B70272A00435DF5 /* Presentation */,
@@ -438,19 +540,29 @@
 			files = (
 				37A77C622B7034A700435DF5 /* LanguageKeys.swift in Sources */,
 				37A77C592B702FB000435DF5 /* ApiInfo.swift in Sources */,
+				37A77C6F2B71234000435DF5 /* ForecastRepository.swift in Sources */,
+				37A77C7F2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift in Sources */,
 				37A77C5E2B70316600435DF5 /* RequestParamsKeys.swift in Sources */,
 				37A77C542B702F7E00435DF5 /* ApiHeaderType.swift in Sources */,
+				37A77C812B7156AE00435DF5 /* ForecastRepositoryProtocol.swift in Sources */,
 				37A77C5C2B7030CD00435DF5 /* BaseRequestParams.swift in Sources */,
+				37A77C6C2B71203F00435DF5 /* DataResult.swift in Sources */,
 				37A77C602B70320C00435DF5 /* DailyForecastParams.swift in Sources */,
-				37A77C652B70374C00435DF5 /* ApiService.swift in Sources */,
+				37A77C852B71574400435DF5 /* HourlyForecastServiceProtocol.swift in Sources */,
+				37A77C722B71273E00435DF5 /* HourlyForecastRemote.swift in Sources */,
+				37A77C652B70374C00435DF5 /* ApiClient.swift in Sources */,
 				37A77C522B702F6500435DF5 /* ApiValue.swift in Sources */,
 				37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */,
 				37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */,
+				37A77C762B71359800435DF5 /* HourlyForecastService.swift in Sources */,
 				37A77C672B70385700435DF5 /* ApiResponse.swift in Sources */,
 				37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */,
+				37A77C6A2B711FDE00435DF5 /* DataResultService.swift in Sources */,
+				37A77C7D2B71452300435DF5 /* HourlyForecastUseCase.swift in Sources */,
 				37A77C4A2B702A9000435DF5 /* Injection.swift in Sources */,
 				37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */,
 				37A77C572B702F9600435DF5 /* ApiHeaders.swift in Sources */,
+				37A77C7B2B7136EC00435DF5 /* HourlyForecast.swift in Sources */,
 				37A77C3D2B70212600435DF5 /* Coordinator.swift in Sources */,
 				37A77C502B702EEF00435DF5 /* BasicUrl.swift in Sources */,
 			);

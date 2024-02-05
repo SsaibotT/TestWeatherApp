@@ -7,11 +7,19 @@
 
 import Foundation
 
-struct Api {
+struct ApiInfo {
     
-    static func recipe(locationKey: Int) -> ApiValue {
+    static func dailyForecast(locationKey: String) -> ApiValue {
         .init(
             path: "/forecasts/v1/daily/1day/\(locationKey)",
+            requestType: .get,
+            header: .basicHeader
+        )
+    }
+    
+    static func hourlyForecast(locationKey: String) -> ApiValue {
+        .init(
+            path: "/forecasts/v1/hourly/12hour/\(locationKey)",
             requestType: .get,
             header: .basicHeader
         )

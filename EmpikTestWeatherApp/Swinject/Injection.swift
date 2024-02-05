@@ -29,6 +29,22 @@ final class Injection {
     private func buildContainer() -> Container {
         let container = Container()
         
+        container.register(HourlyForecastUseCaseProtocol.self) { _ in
+            HourlyForecastUseCase()
+        }
+        
+        container.register(ForecastRepositoryProtocol.self) { _ in
+            ForecastRepository()
+        }
+        
+        container.register(HourlyForecastServiceProtocol.self) { _ in
+            HourlyForecastService()
+        }
+        
+        container.register(ApiClient.self) { _ in
+            ApiClient()
+        }
+        
         return container
     }
 }

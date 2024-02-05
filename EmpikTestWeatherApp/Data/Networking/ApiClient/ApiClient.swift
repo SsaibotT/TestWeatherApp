@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct ApiService {
+struct ApiClient {
     func procedure(
         api: ApiValue,
         params: BaseRequestParams? = nil
