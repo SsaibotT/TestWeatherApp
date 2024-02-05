@@ -12,4 +12,5 @@ struct RequestParamsKeys {
     static let language = "language"
     static let details = "details"
     static let metric = "metric"
+    static let q = "q"
 }

@@ -16,8 +16,10 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let searchCityViewController = SearchCityViewController()
-        searchCityViewController.coordinator = self
+        let searchCityViewModel = SearchCityViewModel()
+        searchCityViewModel.coordinator = self
+        let searchCityViewController = SearchCityViewController(viewModel: searchCityViewModel)
+        
         navigationController.pushViewController(searchCityViewController, animated: false)
     }
 }

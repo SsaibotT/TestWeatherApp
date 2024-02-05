@@ -35,7 +35,7 @@ struct HourlyForecastRemote: Codable {
 }
 
 extension HourlyForecastRemote {
-    static func empty() -> Self {
+    static var empty: Self {
         .init(
             dateTime: "",
             epochDateTime: 0,
@@ -45,7 +45,7 @@ extension HourlyForecastRemote {
             precipitationType: nil,
             precipitationIntensity: nil,
             isDaylight: false,
-            temperature: TemperatureRemote.empty(),
+            temperature: TemperatureRemote.empty,
             precipitationProbability: 0,
             mobileLink: "",
             link: ""
@@ -67,7 +67,7 @@ struct TemperatureRemote: Codable {
 }
 
 extension TemperatureRemote {
-    static func empty() -> Self {
+    static var empty: Self {
         .init(value: 0.0, unit: UnitRemote.c, unitType: 0)
     }
 }

@@ -29,6 +29,31 @@ final class Injection {
     private func buildContainer() -> Container {
         let container = Container()
         
+        cityInfoContainer(container: container)
+        forecastContainer(container: container)
+        
+        container.register(ApiClient.self) { _ in
+            ApiClient()
+        }
+        
+        return container
+    }
+    
+    private func cityInfoContainer(container: Container) {
+        container.register(CityInfoAutocompleteUseCaseProtocol.self) { _ in
+            CityInfoAutocompleteUseCase()
+        }
+        
+        container.register(CityInfoAutocompleteRepositoryProtocol.self) { _ in
+            CityInfoAutocompleteRepository()
+        }
+        
+        container.register(CityInfoAutocompleteServiceProtocol.self) { _ in
+            CityInfoAutocompleteService()
+        }
+    }
+    
+    private func forecastContainer(container: Container) {
         container.register(HourlyForecastUseCaseProtocol.self) { _ in
             HourlyForecastUseCase()
         }
@@ -40,12 +65,6 @@ final class Injection {
         container.register(HourlyForecastServiceProtocol.self) { _ in
             HourlyForecastService()
         }
-        
-        container.register(ApiClient.self) { _ in
-            ApiClient()
-        }
-        
-        return container
     }
 }
 

@@ -9,13 +9,13 @@ import Foundation
 import RxSwift
 
 class ForecastRepository: ForecastRepositoryProtocol {
-    @Injected var forecastService: HourlyForecastServiceProtocol
+    @Injected var service: HourlyForecastServiceProtocol
     
     func getHourlyForecast(locationKey: String) -> Observable<DataResult<[HourlyForecast]>> {
-        forecastService.getHourlyForecast(locationKey: locationKey)
+        service.getHourlyForecast(locationKey: locationKey)
             .map { result in
                 DataResult(
-                    data: result.data?.map { HourlyForecast(from: $0) ?? HourlyForecast.empty() },
+                    data: result.data?.map { HourlyForecast(from: $0) ?? HourlyForecast.empty },
                     failure: result.failure ?? ApiError.noData
                 )
             }

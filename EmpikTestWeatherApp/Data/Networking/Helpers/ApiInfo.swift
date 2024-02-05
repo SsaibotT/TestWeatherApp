@@ -24,6 +24,14 @@ struct ApiInfo {
             header: .basicHeader
         )
     }
+    
+    static var searchCityAutocomplete: ApiValue {
+        .init(
+            path: "/locations/v1/cities/autocomplete",
+            requestType: .get,
+            header: .basicHeader
+        )
+    }
 }
 
 private extension ApiValue {

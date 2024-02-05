@@ -48,7 +48,7 @@ extension HourlyForecast {
         )
     }
     
-    static func empty() -> Self {
+    static var empty: Self {
         .init(
             dateTime: "",
             epochDateTime: 0,
@@ -58,7 +58,7 @@ extension HourlyForecast {
             precipitationType: nil,
             precipitationIntensity: nil,
             isDaylight: false,
-            temperature: Temperature.empty(),
+            temperature: Temperature.empty,
             precipitationProbability: 0,
             mobileLink: "",
             link: ""
@@ -75,7 +75,7 @@ extension Temperature {
         )
     }
     
-    static func empty() -> Self {
+    static var empty: Self {
         .init(value: 0.0, unit: Unit(), unitType: 0)
     }
 }

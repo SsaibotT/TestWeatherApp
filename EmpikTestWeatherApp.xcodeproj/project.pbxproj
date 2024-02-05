@@ -32,6 +32,16 @@
 		37A77C7F2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C7E2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift */; };
 		37A77C812B7156AE00435DF5 /* ForecastRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C802B7156AE00435DF5 /* ForecastRepositoryProtocol.swift */; };
 		37A77C852B71574400435DF5 /* HourlyForecastServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C842B71574400435DF5 /* HourlyForecastServiceProtocol.swift */; };
+		37A77C882B715EC100435DF5 /* CityInfoRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C872B715EC100435DF5 /* CityInfoRemote.swift */; };
+		37A77C8A2B715F1C00435DF5 /* CityInfoAutocompleteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C892B715F1C00435DF5 /* CityInfoAutocompleteService.swift */; };
+		37A77C8C2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C8B2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift */; };
+		37A77C8E2B71603000435DF5 /* CityInfoAutocompleteServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C8D2B71603000435DF5 /* CityInfoAutocompleteServiceProtocol.swift */; };
+		37A77C912B71605F00435DF5 /* CityInfoAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C902B71605F00435DF5 /* CityInfoAutocomplete.swift */; };
+		37A77C932B7160FB00435DF5 /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C922B7160FB00435DF5 /* CityInfo.swift */; };
+		37A77C952B71630000435DF5 /* CityInfoAutocompleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C942B71630000435DF5 /* CityInfoAutocompleteProtocol.swift */; };
+		37A77C9A2B71637000435DF5 /* CityInfoAutocompleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C992B71637000435DF5 /* CityInfoAutocompleteUseCase.swift */; };
+		37A77C9C2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C9B2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift */; };
+		37A77C9E2B71673C00435DF5 /* SearchCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C9D2B71673C00435DF5 /* SearchCityViewModel.swift */; };
 		37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8470E2B6FC04100AE4623 /* AppDelegate.swift */; };
 		37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847102B6FC04100AE4623 /* SceneDelegate.swift */; };
 		37A847182B6FC04300AE4623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A847172B6FC04300AE4623 /* Assets.xcassets */; };
@@ -87,6 +97,16 @@
 		37A77C7E2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastUseCaseProtocol.swift; sourceTree = "<group>"; };
 		37A77C802B7156AE00435DF5 /* ForecastRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryProtocol.swift; sourceTree = "<group>"; };
 		37A77C842B71574400435DF5 /* HourlyForecastServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastServiceProtocol.swift; sourceTree = "<group>"; };
+		37A77C872B715EC100435DF5 /* CityInfoRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoRemote.swift; sourceTree = "<group>"; };
+		37A77C892B715F1C00435DF5 /* CityInfoAutocompleteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteService.swift; sourceTree = "<group>"; };
+		37A77C8B2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteParams.swift; sourceTree = "<group>"; };
+		37A77C8D2B71603000435DF5 /* CityInfoAutocompleteServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteServiceProtocol.swift; sourceTree = "<group>"; };
+		37A77C902B71605F00435DF5 /* CityInfoAutocomplete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocomplete.swift; sourceTree = "<group>"; };
+		37A77C922B7160FB00435DF5 /* CityInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		37A77C942B71630000435DF5 /* CityInfoAutocompleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteProtocol.swift; sourceTree = "<group>"; };
+		37A77C992B71637000435DF5 /* CityInfoAutocompleteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteUseCase.swift; sourceTree = "<group>"; };
+		37A77C9B2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteUseCaseProtocol.swift; sourceTree = "<group>"; };
+		37A77C9D2B71673C00435DF5 /* SearchCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewModel.swift; sourceTree = "<group>"; };
 		37A8470B2B6FC04100AE4623 /* EmpikTestWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpikTestWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A8470E2B6FC04100AE4623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A847102B6FC04100AE4623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				37A77C402B7021E700435DF5 /* SearchCityViewController.swift */,
+				37A77C9D2B71673C00435DF5 /* SearchCityViewModel.swift */,
 			);
 			path = SearchCity;
 			sourceTree = "<group>";
@@ -210,6 +231,7 @@
 				37A77C5D2B70316600435DF5 /* RequestParamsKeys.swift */,
 				37A77C5B2B7030CD00435DF5 /* BaseRequestParams.swift */,
 				37A77C5F2B70320C00435DF5 /* DailyForecastParams.swift */,
+				37A77C8B2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift */,
 			);
 			path = RequestParams;
 			sourceTree = "<group>";
@@ -226,6 +248,7 @@
 		37A77C682B71160300435DF5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				37A77C8F2B71604F00435DF5 /* CityInfo */,
 				37A77C6D2B7122E800435DF5 /* Forecast */,
 			);
 			path = Repository;
@@ -244,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				37A77C712B71273E00435DF5 /* HourlyForecastRemote.swift */,
+				37A77C872B715EC100435DF5 /* CityInfoRemote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +275,7 @@
 		37A77C732B71352C00435DF5 /* DataService */ = {
 			isa = PBXGroup;
 			children = (
+				37A77C862B715D6800435DF5 /* CityInfoAutocomplete */,
 				37A77C742B71358300435DF5 /* Forecast */,
 				37A77C692B711FDE00435DF5 /* DataResultService.swift */,
 				37A77C6B2B71203F00435DF5 /* DataResult.swift */,
@@ -279,8 +304,8 @@
 		37A77C782B7136C500435DF5 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				37A77C7E2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift */,
-				37A77C7C2B71452300435DF5 /* HourlyForecastUseCase.swift */,
+				37A77C982B71634600435DF5 /* CityInfoAutocomplete */,
+				37A77C972B71633300435DF5 /* HourlyForecast */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -289,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				37A77C7A2B7136EC00435DF5 /* HourlyForecast.swift */,
+				37A77C922B7160FB00435DF5 /* CityInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +327,42 @@
 				37A77C702B71272B00435DF5 /* Models */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		37A77C862B715D6800435DF5 /* CityInfoAutocomplete */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C8D2B71603000435DF5 /* CityInfoAutocompleteServiceProtocol.swift */,
+				37A77C892B715F1C00435DF5 /* CityInfoAutocompleteService.swift */,
+			);
+			path = CityInfoAutocomplete;
+			sourceTree = "<group>";
+		};
+		37A77C8F2B71604F00435DF5 /* CityInfo */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C942B71630000435DF5 /* CityInfoAutocompleteProtocol.swift */,
+				37A77C902B71605F00435DF5 /* CityInfoAutocomplete.swift */,
+			);
+			path = CityInfo;
+			sourceTree = "<group>";
+		};
+		37A77C972B71633300435DF5 /* HourlyForecast */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C7E2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift */,
+				37A77C7C2B71452300435DF5 /* HourlyForecastUseCase.swift */,
+			);
+			path = HourlyForecast;
+			sourceTree = "<group>";
+		};
+		37A77C982B71634600435DF5 /* CityInfoAutocomplete */ = {
+			isa = PBXGroup;
+			children = (
+				37A77C9B2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift */,
+				37A77C992B71637000435DF5 /* CityInfoAutocompleteUseCase.swift */,
+			);
+			path = CityInfoAutocomplete;
 			sourceTree = "<group>";
 		};
 		37A847022B6FC04100AE4623 = {
@@ -544,21 +606,31 @@
 				37A77C7F2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift in Sources */,
 				37A77C5E2B70316600435DF5 /* RequestParamsKeys.swift in Sources */,
 				37A77C542B702F7E00435DF5 /* ApiHeaderType.swift in Sources */,
+				37A77C9C2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift in Sources */,
+				37A77C952B71630000435DF5 /* CityInfoAutocompleteProtocol.swift in Sources */,
 				37A77C812B7156AE00435DF5 /* ForecastRepositoryProtocol.swift in Sources */,
 				37A77C5C2B7030CD00435DF5 /* BaseRequestParams.swift in Sources */,
 				37A77C6C2B71203F00435DF5 /* DataResult.swift in Sources */,
 				37A77C602B70320C00435DF5 /* DailyForecastParams.swift in Sources */,
 				37A77C852B71574400435DF5 /* HourlyForecastServiceProtocol.swift in Sources */,
 				37A77C722B71273E00435DF5 /* HourlyForecastRemote.swift in Sources */,
+				37A77C912B71605F00435DF5 /* CityInfoAutocomplete.swift in Sources */,
 				37A77C652B70374C00435DF5 /* ApiClient.swift in Sources */,
+				37A77C8E2B71603000435DF5 /* CityInfoAutocompleteServiceProtocol.swift in Sources */,
 				37A77C522B702F6500435DF5 /* ApiValue.swift in Sources */,
+				37A77C8C2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift in Sources */,
 				37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */,
 				37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */,
+				37A77C9E2B71673C00435DF5 /* SearchCityViewModel.swift in Sources */,
+				37A77C8A2B715F1C00435DF5 /* CityInfoAutocompleteService.swift in Sources */,
 				37A77C762B71359800435DF5 /* HourlyForecastService.swift in Sources */,
 				37A77C672B70385700435DF5 /* ApiResponse.swift in Sources */,
+				37A77C882B715EC100435DF5 /* CityInfoRemote.swift in Sources */,
 				37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */,
 				37A77C6A2B711FDE00435DF5 /* DataResultService.swift in Sources */,
+				37A77C932B7160FB00435DF5 /* CityInfo.swift in Sources */,
 				37A77C7D2B71452300435DF5 /* HourlyForecastUseCase.swift in Sources */,
+				37A77C9A2B71637000435DF5 /* CityInfoAutocompleteUseCase.swift in Sources */,
 				37A77C4A2B702A9000435DF5 /* Injection.swift in Sources */,
 				37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */,
 				37A77C572B702F9600435DF5 /* ApiHeaders.swift in Sources */,
