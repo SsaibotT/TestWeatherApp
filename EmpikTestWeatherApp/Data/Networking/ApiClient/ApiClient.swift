@@ -31,30 +31,21 @@ struct ApiClient {
     }
     
     private func get(request: URLRequest) -> Observable<ApiResult> {
-        Observable.create { observable in
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let httpUrlResponse = response as? HTTPURLResponse else {
-                    observable.onNext(.failure(.undefined))
-                    return
-                }
-
-                let statusCode = httpUrlResponse.statusCode
+        URLSession.shared.rx
+            .response(request: request)
+            .map { result -> ApiResult in
+                let statusCode = result.response.statusCode
                 
                 let code = statusCode
-                if 200 ... 205 ~= code, let data = data {
-                    observable.onNext(.success(data))
-                } else if let error = error {
-                    observable.onNext(.failure(.error(error)))
+                if 200 ... 205 ~= code {
+                    return .success(result.data)
+                } else if 503 == code {
+                    return .failure(.limitedResponse)
                 } else {
-                    observable.onNext(.failure(.badRequest))
+                    return .failure(.badRequest)
                 }
             }
-            task.resume()
-            
-            return Disposables.create {
-                task.cancel()
-            }
-        }
+            .observe(on: MainScheduler.asyncInstance)
     }
     
     private func makeRequest(urlString: String, headers: ApiHeaders, params: [String: Any]?, requestType: ApiReqeustType) -> URLRequest? {

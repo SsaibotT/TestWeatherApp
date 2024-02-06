@@ -15,7 +15,7 @@ class CityInfoAutocompleteRepository: CityInfoAutocompleteRepositoryProtocol {
         service.getCityInfoAutocomplete(word: word)
             .map { result in
                 DataResult(
-                    data: result.data?.map { CityInfo(from: $0) ?? CityInfo.empty },
+                    data: result.data?.map { CityInfo(from: $0) }.compactMap { $0 },
                     failure: result.failure ?? ApiError.noData
                 )
             }

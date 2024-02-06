@@ -55,6 +55,7 @@ class SearchCityViewController: UIViewController {
         configureTableView()
     }
     
+    // MARK: Configure TableView
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -64,7 +65,6 @@ class SearchCityViewController: UIViewController {
     // MARK: Observables
     private func configureObservables() {
         viewModel.cities.bind { [weak self] cities in
-            print(cities.map { $0.localizedName} )
             self?.tableView.reloadData()
         }
         .disposed(by: disposeBag)
@@ -72,7 +72,7 @@ class SearchCityViewController: UIViewController {
         textField.rx.controlEvent(.editingChanged)
             .bind { [weak self] in
                 guard let text = self?.textField.text else { return }
-                let isValid = text.matchesRegex("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ ]*$")
+                let isValid = text.matchesRegex("^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻа-яА-Я ]*$")
                 if !isValid {
                     self?.textField.text?.removeLast()
                 } else {
@@ -83,14 +83,16 @@ class SearchCityViewController: UIViewController {
         
         textField.rx.text
             .orEmpty
+            .skip(1)
             .bind(to: viewModel.getCityInfoAutocomplete)
             .disposed(by: disposeBag)
         
-        cancelButton.rx.tap.bind { [weak self] _ in
-            self?.textField.text = ""
-            self?.viewModel.cancelTapped.accept(())
-        }
-        .disposed(by: disposeBag)
+        cancelButton.rx.tap
+            .bind { [weak self] _ in
+                self?.textField.text = ""
+                self?.viewModel.cancelTapped.accept(())
+            }
+            .disposed(by: disposeBag)
     }
     
     // MARK: Constraints
@@ -115,8 +117,8 @@ class SearchCityViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: textField.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
@@ -139,8 +141,6 @@ extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(viewModel.cities.value[indexPath.row].key)
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

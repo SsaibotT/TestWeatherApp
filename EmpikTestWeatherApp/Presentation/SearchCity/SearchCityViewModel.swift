@@ -10,8 +10,8 @@ import RxSwift
 import RxRelay
 
 class SearchCityViewModel {
-    var coordinator: Coordinator?
     @Injected var cityInfoUseCase: CityInfoAutocompleteUseCaseProtocol
+    var coordinator: Coordinator?
     var disposeBag = DisposeBag()
     
     // MARK: Output
@@ -22,15 +22,37 @@ class SearchCityViewModel {
     var cancelTapped = BehaviorRelay<Void>(value: ())
     
     init() {
+        configureBindings()
+    }
+    
+    // MARK: Configuring
+    private func configureBindings() {
         getCityInfoAutocomplete
+            .debounce(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .bind { [weak self] word in
-                if word.isEmpty { self?.cities.accept([]) }
-                self?.getCityInfoAutocomplete(by: word)
+            .flatMapLatest { [weak self] word -> Observable<DataResult<[CityInfo]>> in
+                guard let self = self else { return Observable.empty() }
+                
+                if word.isEmpty {
+                    self.cities.accept([])
+                } else {
+                    let observable = self.getCityInfoAutocomplete(by: word)
+                    return observable
+                        .catch { Observable.just(DataResult(data: nil, failure: .error($0))) }
+                }
+                
+                return Observable.empty()
+            }
+            .observe(on: MainScheduler.instance)
+            .bind { result in
+                if let resultCities = result.data {
+                    self.cities.accept(resultCities)
+                }
             }
             .disposed(by: disposeBag)
         
         cancelTapped
+            .skip(1)
             .bind { [weak self] _ in
                 self?.getCityInfoAutocomplete.accept("")
                 self?.cities.accept([])
@@ -39,15 +61,7 @@ class SearchCityViewModel {
     }
     
     // MARK: Private methods
-    private func getCityInfoAutocomplete(by word: String) {
-        print(word)
+    private func getCityInfoAutocomplete(by word: String) -> Observable<DataResult<[CityInfo]>> {
         cityInfoUseCase.getCityInfoAutocomplete(word: word)
-            .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] result in
-                if let resultCities = result.data {
-                    self?.cities.accept(resultCities)
-                }
-            }
-            .disposed(by: disposeBag)
     }
 }

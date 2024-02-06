@@ -17,4 +17,5 @@ enum ApiError: Error {
     case badRequest
     case noData
     case undefined
+    case limitedResponse
 }

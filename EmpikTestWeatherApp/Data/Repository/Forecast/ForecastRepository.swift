@@ -15,7 +15,7 @@ class ForecastRepository: ForecastRepositoryProtocol {
         service.getHourlyForecast(locationKey: locationKey)
             .map { result in
                 DataResult(
-                    data: result.data?.map { HourlyForecast(from: $0) ?? HourlyForecast.empty },
+                    data: result.data?.map { HourlyForecast(from: $0) }.compactMap { $0 },
                     failure: result.failure ?? ApiError.noData
                 )
             }
