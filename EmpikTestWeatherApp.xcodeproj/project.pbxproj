@@ -64,6 +64,7 @@
 		37A847262B6FC04300AE4623 /* EmpikTestWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847252B6FC04300AE4623 /* EmpikTestWeatherAppTests.swift */; };
 		37A847302B6FC04300AE4623 /* EmpikTestWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8472F2B6FC04300AE4623 /* EmpikTestWeatherAppUITests.swift */; };
 		37A847322B6FC04300AE4623 /* EmpikTestWeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847312B6FC04300AE4623 /* EmpikTestWeatherAppUITestsLaunchTests.swift */; };
+		37DF192A2B7592CE0020F101 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DF19292B7592CE0020F101 /* Temperature.swift */; };
 		5AD7A8EA4C5CCF0BD9435051 /* Pods_EmpikTestWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0405A1D71D3926B65718EA40 /* Pods_EmpikTestWeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +149,7 @@
 		37A8472B2B6FC04300AE4623 /* EmpikTestWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpikTestWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A8472F2B6FC04300AE4623 /* EmpikTestWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpikTestWeatherAppUITests.swift; sourceTree = "<group>"; };
 		37A847312B6FC04300AE4623 /* EmpikTestWeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpikTestWeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37DF19292B7592CE0020F101 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		8BFC358A6B0BD5D0A0536490 /* Pods-EmpikTestWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmpikTestWeatherApp.debug.xcconfig"; path = "Target Support Files/Pods-EmpikTestWeatherApp/Pods-EmpikTestWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -376,6 +378,7 @@
 				37A77C7A2B7136EC00435DF5 /* HourlyForecast.swift */,
 				37A77C922B7160FB00435DF5 /* CityInfo.swift */,
 				378F95F42B74FC5E00237D18 /* CurrentCondition.swift */,
+				37DF19292B7592CE0020F101 /* Temperature.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				37A77C8C2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift in Sources */,
 				37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */,
 				378F95FE2B75312000237D18 /* LastLocationsManager.swift in Sources */,
+				37DF192A2B7592CE0020F101 /* Temperature.swift in Sources */,
 				37A77D382B74F8B000435DF5 /* CurrentConditionUseCase.swift in Sources */,
 				37A77D2A2B74F4AB00435DF5 /* CurrentConditionService.swift in Sources */,
 				378F95FB2B752C9700237D18 /* LocationWeatherTableViewCell.swift in Sources */,

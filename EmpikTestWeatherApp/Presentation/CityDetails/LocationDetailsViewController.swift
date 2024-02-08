@@ -106,10 +106,15 @@ class LocationDetailsViewController: UIViewController {
                 if let locationData = locationData {
                     self?.cityNameLabel.text = locationData.localizedName
                     self?.cityNameAreaLabel.text = "\(locationData.country.localizedName), \(locationData.administrativeArea.localizedName)"
-                    self?.temperatureAreaLabel.text = temperature
+                    self?.temperatureAreaLabel.text = "\(temperature?.value ?? 0.0) \(temperature?.unit.c ?? "C")"
                     self?.weatherTextLabel.text = weathertext
                 }
             }
+            .disposed(by: disposeBag)
+        
+        viewModel.currentConditionsTemperature
+            .map { $0?.temperatureColor ?? .black }
+            .bind(to: temperatureAreaLabel.rx.textColor)
             .disposed(by: disposeBag)
         
         viewModel.hourlyForecast
@@ -176,7 +181,9 @@ extension LocationDetailsViewController: UITableViewDelegate, UITableViewDataSou
         let hourlyForecats = viewModel.hourlyForecast.value[indexPath.row]
         cell.configure(
             title: "\(hourlyForecats.convertedDateTime ?? "00:00")",
-            subtitle: "\(hourlyForecats.temperature.value) \(hourlyForecats.temperature.unit.c), \(hourlyForecats.iconPhrase)"
+            temperature: "\(hourlyForecats.temperature.value) \(hourlyForecats.temperature.unit.c)",
+            weather: "\(hourlyForecats.iconPhrase)",
+            temperatureColor: hourlyForecats.temperature.temperatureColor
         )
 
         return cell

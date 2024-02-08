@@ -17,7 +17,7 @@ class LocationDetailsViewModel {
     private var locationData: CityInfo
     
     // MARK: Output
-    var currentConditionsTemperature = BehaviorRelay<String?>(value: nil)
+    var currentConditionsTemperature = BehaviorRelay<Temperature?>(value: nil)
     var currentConditionsWeather = BehaviorRelay<String?>(value: nil)
     var locationDataObservable = BehaviorRelay<CityInfo?>(value: nil)
     var hourlyForecast = BehaviorRelay<[HourlyForecast]>(value: [])
@@ -66,11 +66,9 @@ class LocationDetailsViewModel {
             .bind { [weak self] result in
                 if let data = result.data {
                     guard let locationData = data.first else { return }
-                    let temperature = "\(locationData.temperature.temperature.value) \(locationData.temperature.temperature.unit)"
-                    let weather = locationData.weatherText
                     
-                    self?.currentConditionsTemperature.accept(temperature)
-                    self?.currentConditionsWeather.accept(weather)
+                    self?.currentConditionsTemperature.accept(locationData.temperature.temperature)
+                    self?.currentConditionsWeather.accept(locationData.weatherText)
                 }
             }
             .disposed(by: disposeBag)

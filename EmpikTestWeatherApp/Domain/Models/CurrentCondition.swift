@@ -14,12 +14,7 @@ struct CurrentCondition {
 }
 
 struct CurrentTemperature {
-    let temperature: TemperatureValue
-}
-
-struct TemperatureValue {
-    let value: Double
-    let unit: String
+    let temperature: Temperature
 }
 
 extension CurrentCondition {
@@ -42,26 +37,10 @@ extension CurrentCondition {
 
 extension CurrentTemperature {
     init(from remote: CurrentTemperatureRemote) {
-        self.init(temperature: TemperatureValue(from: remote.temperature))
+        self.init(temperature: Temperature(value: remote.temperature.value, unit: Unit()))
     }
     
     static var empty: Self {
-        .init(temperature: TemperatureValue.empty)
-    }
-}
-
-extension TemperatureValue {
-    init(from remote: TemperatureValueRemote) {
-        self.init(
-            value: remote.value,
-            unit: remote.unit
-        )
-    }
-    
-    static var empty: Self {
-        .init(
-            value: 0.0,
-            unit: ""
-        )
+        .init(temperature: Temperature.empty)
     }
 }

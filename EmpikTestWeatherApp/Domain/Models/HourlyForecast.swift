@@ -6,20 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct HourlyForecast {
     let dateTime: String
     let iconPhrase: String
     let temperature: Temperature
-}
-
-struct Temperature {
-    let value: Double
-    let unit: Unit
-}
-
-struct Unit {
-    let c = "C"
 }
 
 extension HourlyForecast {
@@ -38,19 +30,6 @@ extension HourlyForecast {
             iconPhrase: "",
             temperature: Temperature.empty
         )
-    }
-}
-
-extension Temperature {
-    init(from remote: TemperatureRemote) {
-        self.init(
-            value: remote.value,
-            unit: Unit()
-        )
-    }
-    
-    static var empty: Self {
-        .init(value: 0.0, unit: Unit())
     }
 }
 
