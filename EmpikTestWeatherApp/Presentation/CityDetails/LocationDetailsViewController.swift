@@ -177,6 +177,7 @@ extension LocationDetailsViewController: UITableViewDelegate, UITableViewDataSou
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else {
             fatalError("Failed to dequeue CustomTableViewCell")
         }
+        cell.selectionStyle = .none
             
         let hourlyForecats = viewModel.hourlyForecast.value[indexPath.row]
         cell.configure(
@@ -187,10 +188,5 @@ extension LocationDetailsViewController: UITableViewDelegate, UITableViewDataSou
         )
 
         return cell
-    }
-
-    // MARK: - UITableViewDelegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

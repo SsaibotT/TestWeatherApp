@@ -41,7 +41,7 @@ extension HourlyForecast {
         if let date = dateFormatter.date(from: dateTime) {
             let outputDateFormatter = DateFormatter()
             outputDateFormatter.dateFormat = "HH:mm"
-            outputDateFormatter.timeZone = TimeZone(identifier: "GMT+1")
+            outputDateFormatter.timeZone = TimeZone.current
 
             let outputDateString = outputDateFormatter.string(from: date)
             
