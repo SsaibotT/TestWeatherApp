@@ -10,9 +10,10 @@ import RxSwift
 import RxRelay
 
 class SearchCityViewModel {
-    @Injected var cityInfoUseCase: CityInfoAutocompleteUseCaseProtocol
-    var coordinator: Coordinator?
-    var disposeBag = DisposeBag()
+    @Injected private var cityInfoUseCase: CityInfoAutocompleteUseCaseProtocol
+    @Injected private var lastLocationsManager: LastLocationsManager
+    private var coordinator: MainCoordinator
+    private var disposeBag = DisposeBag()
     
     // MARK: Output
     var cities = BehaviorRelay<[CityInfo]>(value: [])
@@ -20,8 +21,12 @@ class SearchCityViewModel {
     // MARK: Actions
     var getCityInfoAutocomplete = BehaviorRelay<String>(value: "")
     var cancelTapped = BehaviorRelay<Void>(value: ())
+    var locationDetailsIndex = BehaviorRelay<Int>(value: 0)
     
-    init() {
+    // MARK: Lifecycle
+    init(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
+        
         configureBindings()
     }
     
@@ -34,7 +39,11 @@ class SearchCityViewModel {
                 guard let self = self else { return Observable.empty() }
                 
                 if word.isEmpty {
-                    self.cities.accept([])
+                    if let locations = self.lastLocationsManager.getLastLocations() {
+                        self.cities.accept(locations)
+                    } else {
+                        self.cities.accept([])
+                    }
                 } else {
                     let observable = self.getCityInfoAutocomplete(by: word)
                     return observable
@@ -56,6 +65,17 @@ class SearchCityViewModel {
             .bind { [weak self] _ in
                 self?.getCityInfoAutocomplete.accept("")
                 self?.cities.accept([])
+            }
+            .disposed(by: disposeBag)
+        
+        locationDetailsIndex
+            .skip(1)
+            .bind { [weak self] index in
+                guard let self = self else { return }
+                let location = self.cities.value[index]
+                
+                self.lastLocationsManager.save(locationData: location)
+                self.coordinator.locationDetailsScreen(locationData: location)
             }
             .disposed(by: disposeBag)
     }

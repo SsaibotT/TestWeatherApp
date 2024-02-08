@@ -31,12 +31,34 @@ final class Injection {
         
         cityInfoContainer(container: container)
         forecastContainer(container: container)
+        currentConditionContainer(container: container)
+        managersContainer(container: container)
         
         container.register(ApiClient.self) { _ in
             ApiClient()
         }
         
         return container
+    }
+    
+    private func managersContainer(container: Container) {
+        container.register(LastLocationsManager.self) { _ in
+            LastLocationsManager()
+        }
+    }
+    
+    private func currentConditionContainer(container: Container) {
+        container.register(CurrentConditionUseCaseProtocol.self) { _ in
+            CurrentConditionUseCase()
+        }
+        
+        container.register(CurrentConditionRepositoryProtocol.self) { _ in
+            CurrentConditionRepository()
+        }
+        
+        container.register(CurrentConditionServiceProtocol.self) { _ in
+            CurrentConditionService()
+        }
     }
     
     private func cityInfoContainer(container: Container) {

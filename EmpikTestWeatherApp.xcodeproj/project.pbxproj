@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378F95F52B74FC5E00237D18 /* CurrentCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F95F42B74FC5E00237D18 /* CurrentCondition.swift */; };
+		378F95FB2B752C9700237D18 /* LocationWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F95FA2B752C9700237D18 /* LocationWeatherTableViewCell.swift */; };
+		378F95FE2B75312000237D18 /* LastLocationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F95FD2B75312000237D18 /* LastLocationsManager.swift */; };
+		378F96012B753A4700237D18 /* String+matchesRegexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378F96002B753A4700237D18 /* String+matchesRegexp.swift */; };
 		37A77C3D2B70212600435DF5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C3C2B70212600435DF5 /* Coordinator.swift */; };
 		37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C3E2B70214B00435DF5 /* MainCoordinator.swift */; };
 		37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C402B7021E700435DF5 /* SearchCityViewController.swift */; };
@@ -42,8 +46,17 @@
 		37A77C9A2B71637000435DF5 /* CityInfoAutocompleteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C992B71637000435DF5 /* CityInfoAutocompleteUseCase.swift */; };
 		37A77C9C2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C9B2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift */; };
 		37A77C9E2B71673C00435DF5 /* SearchCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77C9D2B71673C00435DF5 /* SearchCityViewModel.swift */; };
-		37A77CA12B72818000435DF5 /* CityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77CA02B72818000435DF5 /* CityDetailsViewModel.swift */; };
-		37A77CA32B7281A200435DF5 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77CA22B7281A200435DF5 /* CityDetailsViewController.swift */; };
+		37A77CA12B72818000435DF5 /* LocationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77CA02B72818000435DF5 /* LocationDetailsViewModel.swift */; };
+		37A77CA32B7281A200435DF5 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77CA22B7281A200435DF5 /* LocationDetailsViewController.swift */; };
+		37A77D252B74DFC000435DF5 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D242B74DFC000435DF5 /* AppKey.swift */; };
+		37A77D272B74F2BC00435DF5 /* CurrentConditionRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D262B74F2BC00435DF5 /* CurrentConditionRemote.swift */; };
+		37A77D2A2B74F4AB00435DF5 /* CurrentConditionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D292B74F4AB00435DF5 /* CurrentConditionService.swift */; };
+		37A77D2C2B74F50400435DF5 /* CurrentConditionParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D2B2B74F50400435DF5 /* CurrentConditionParams.swift */; };
+		37A77D2E2B74F59500435DF5 /* CurrentConditionServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D2D2B74F59500435DF5 /* CurrentConditionServiceProtocol.swift */; };
+		37A77D312B74F5DA00435DF5 /* CurrentConditionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D302B74F5DA00435DF5 /* CurrentConditionRepository.swift */; };
+		37A77D332B74F61D00435DF5 /* CurrentConditionRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D322B74F61D00435DF5 /* CurrentConditionRepositoryProtocol.swift */; };
+		37A77D382B74F8B000435DF5 /* CurrentConditionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D372B74F8B000435DF5 /* CurrentConditionUseCase.swift */; };
+		37A77D3A2B74F90E00435DF5 /* CurrentConditionUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A77D392B74F90E00435DF5 /* CurrentConditionUseCaseProtocol.swift */; };
 		37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8470E2B6FC04100AE4623 /* AppDelegate.swift */; };
 		37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A847102B6FC04100AE4623 /* SceneDelegate.swift */; };
 		37A847182B6FC04300AE4623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A847172B6FC04300AE4623 /* Assets.xcassets */; };
@@ -74,6 +87,10 @@
 /* Begin PBXFileReference section */
 		0405A1D71D3926B65718EA40 /* Pods_EmpikTestWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmpikTestWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D164A9735A48DFCE5FCB83 /* Pods-EmpikTestWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmpikTestWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-EmpikTestWeatherApp/Pods-EmpikTestWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		378F95F42B74FC5E00237D18 /* CurrentCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCondition.swift; sourceTree = "<group>"; };
+		378F95FA2B752C9700237D18 /* LocationWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWeatherTableViewCell.swift; sourceTree = "<group>"; };
+		378F95FD2B75312000237D18 /* LastLocationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastLocationsManager.swift; sourceTree = "<group>"; };
+		378F96002B753A4700237D18 /* String+matchesRegexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+matchesRegexp.swift"; sourceTree = "<group>"; };
 		37A77C3C2B70212600435DF5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		37A77C3E2B70214B00435DF5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		37A77C402B7021E700435DF5 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +126,17 @@
 		37A77C992B71637000435DF5 /* CityInfoAutocompleteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteUseCase.swift; sourceTree = "<group>"; };
 		37A77C9B2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoAutocompleteUseCaseProtocol.swift; sourceTree = "<group>"; };
 		37A77C9D2B71673C00435DF5 /* SearchCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewModel.swift; sourceTree = "<group>"; };
-		37A77CA02B72818000435DF5 /* CityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewModel.swift; sourceTree = "<group>"; };
-		37A77CA22B7281A200435DF5 /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
+		37A77CA02B72818000435DF5 /* LocationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewModel.swift; sourceTree = "<group>"; };
+		37A77CA22B7281A200435DF5 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		37A77D242B74DFC000435DF5 /* AppKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
+		37A77D262B74F2BC00435DF5 /* CurrentConditionRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionRemote.swift; sourceTree = "<group>"; };
+		37A77D292B74F4AB00435DF5 /* CurrentConditionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionService.swift; sourceTree = "<group>"; };
+		37A77D2B2B74F50400435DF5 /* CurrentConditionParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionParams.swift; sourceTree = "<group>"; };
+		37A77D2D2B74F59500435DF5 /* CurrentConditionServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionServiceProtocol.swift; sourceTree = "<group>"; };
+		37A77D302B74F5DA00435DF5 /* CurrentConditionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionRepository.swift; sourceTree = "<group>"; };
+		37A77D322B74F61D00435DF5 /* CurrentConditionRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionRepositoryProtocol.swift; sourceTree = "<group>"; };
+		37A77D372B74F8B000435DF5 /* CurrentConditionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionUseCase.swift; sourceTree = "<group>"; };
+		37A77D392B74F90E00435DF5 /* CurrentConditionUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentConditionUseCaseProtocol.swift; sourceTree = "<group>"; };
 		37A8470B2B6FC04100AE4623 /* EmpikTestWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpikTestWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A8470E2B6FC04100AE4623 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37A847102B6FC04100AE4623 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +184,30 @@
 				06D164A9735A48DFCE5FCB83 /* Pods-EmpikTestWeatherApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		378F95F92B752C6600237D18 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				378F95FA2B752C9700237D18 /* LocationWeatherTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		378F95FC2B7530D500237D18 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				378F95FD2B75312000237D18 /* LastLocationsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		378F95FF2B753A3700237D18 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				378F96002B753A4700237D18 /* String+matchesRegexp.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		37A77C422B70271200435DF5 /* AppConfiguration */ = {
@@ -237,6 +287,7 @@
 				37A77C5B2B7030CD00435DF5 /* BaseRequestParams.swift */,
 				37A77C5F2B70320C00435DF5 /* DailyForecastParams.swift */,
 				37A77C8B2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift */,
+				37A77D2B2B74F50400435DF5 /* CurrentConditionParams.swift */,
 			);
 			path = RequestParams;
 			sourceTree = "<group>";
@@ -253,6 +304,7 @@
 		37A77C682B71160300435DF5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				37A77D2F2B74F5BA00435DF5 /* CurrentCondition */,
 				37A77C8F2B71604F00435DF5 /* CityInfo */,
 				37A77C6D2B7122E800435DF5 /* Forecast */,
 			);
@@ -273,6 +325,7 @@
 			children = (
 				37A77C712B71273E00435DF5 /* HourlyForecastRemote.swift */,
 				37A77C872B715EC100435DF5 /* CityInfoRemote.swift */,
+				37A77D262B74F2BC00435DF5 /* CurrentConditionRemote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +333,7 @@
 		37A77C732B71352C00435DF5 /* DataService */ = {
 			isa = PBXGroup;
 			children = (
+				37A77D282B74F47700435DF5 /* CurrentCondition */,
 				37A77C862B715D6800435DF5 /* CityInfoAutocomplete */,
 				37A77C742B71358300435DF5 /* Forecast */,
 				37A77C692B711FDE00435DF5 /* DataResultService.swift */,
@@ -309,6 +363,7 @@
 		37A77C782B7136C500435DF5 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				37A77D362B74F89F00435DF5 /* CurrentCondition */,
 				37A77C982B71634600435DF5 /* CityInfoAutocomplete */,
 				37A77C972B71633300435DF5 /* HourlyForecast */,
 			);
@@ -320,6 +375,7 @@
 			children = (
 				37A77C7A2B7136EC00435DF5 /* HourlyForecast.swift */,
 				37A77C922B7160FB00435DF5 /* CityInfo.swift */,
+				378F95F42B74FC5E00237D18 /* CurrentCondition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,10 +429,38 @@
 		37A77C9F2B72817000435DF5 /* CityDetails */ = {
 			isa = PBXGroup;
 			children = (
-				37A77CA22B7281A200435DF5 /* CityDetailsViewController.swift */,
-				37A77CA02B72818000435DF5 /* CityDetailsViewModel.swift */,
+				378F95F92B752C6600237D18 /* TableViewCell */,
+				37A77CA22B7281A200435DF5 /* LocationDetailsViewController.swift */,
+				37A77CA02B72818000435DF5 /* LocationDetailsViewModel.swift */,
 			);
 			path = CityDetails;
+			sourceTree = "<group>";
+		};
+		37A77D282B74F47700435DF5 /* CurrentCondition */ = {
+			isa = PBXGroup;
+			children = (
+				37A77D2D2B74F59500435DF5 /* CurrentConditionServiceProtocol.swift */,
+				37A77D292B74F4AB00435DF5 /* CurrentConditionService.swift */,
+			);
+			path = CurrentCondition;
+			sourceTree = "<group>";
+		};
+		37A77D2F2B74F5BA00435DF5 /* CurrentCondition */ = {
+			isa = PBXGroup;
+			children = (
+				37A77D322B74F61D00435DF5 /* CurrentConditionRepositoryProtocol.swift */,
+				37A77D302B74F5DA00435DF5 /* CurrentConditionRepository.swift */,
+			);
+			path = CurrentCondition;
+			sourceTree = "<group>";
+		};
+		37A77D362B74F89F00435DF5 /* CurrentCondition */ = {
+			isa = PBXGroup;
+			children = (
+				37A77D392B74F90E00435DF5 /* CurrentConditionUseCaseProtocol.swift */,
+				37A77D372B74F8B000435DF5 /* CurrentConditionUseCase.swift */,
+			);
+			path = CurrentCondition;
 			sourceTree = "<group>";
 		};
 		37A847022B6FC04100AE4623 = {
@@ -404,6 +488,8 @@
 		37A8470D2B6FC04100AE4623 /* EmpikTestWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				378F95FF2B753A3700237D18 /* Extension */,
+				378F95FC2B7530D500237D18 /* Managers */,
 				37A77C822B7156DF00435DF5 /* Data */,
 				37A77C772B7136A700435DF5 /* Domain */,
 				37A77C482B702A1600435DF5 /* Swinject */,
@@ -411,6 +497,7 @@
 				37A77C432B70272A00435DF5 /* Presentation */,
 				37A77C422B70271200435DF5 /* AppConfiguration */,
 				37A8471C2B6FC04300AE4623 /* Info.plist */,
+				37A77D242B74DFC000435DF5 /* AppKey.swift */,
 			);
 			path = EmpikTestWeatherApp;
 			sourceTree = "<group>";
@@ -615,35 +702,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				37A77C622B7034A700435DF5 /* LanguageKeys.swift in Sources */,
+				37A77D312B74F5DA00435DF5 /* CurrentConditionRepository.swift in Sources */,
 				37A77C592B702FB000435DF5 /* ApiInfo.swift in Sources */,
 				37A77C6F2B71234000435DF5 /* ForecastRepository.swift in Sources */,
 				37A77C7F2B71568C00435DF5 /* HourlyForecastUseCaseProtocol.swift in Sources */,
 				37A77C5E2B70316600435DF5 /* RequestParamsKeys.swift in Sources */,
+				37A77D2E2B74F59500435DF5 /* CurrentConditionServiceProtocol.swift in Sources */,
+				37A77D332B74F61D00435DF5 /* CurrentConditionRepositoryProtocol.swift in Sources */,
 				37A77C542B702F7E00435DF5 /* ApiHeaderType.swift in Sources */,
 				37A77C9C2B7163E700435DF5 /* CityInfoAutocompleteUseCaseProtocol.swift in Sources */,
 				37A77C952B71630000435DF5 /* CityInfoAutocompleteProtocol.swift in Sources */,
 				37A77C812B7156AE00435DF5 /* ForecastRepositoryProtocol.swift in Sources */,
+				37A77D252B74DFC000435DF5 /* AppKey.swift in Sources */,
 				37A77C5C2B7030CD00435DF5 /* BaseRequestParams.swift in Sources */,
 				37A77C6C2B71203F00435DF5 /* DataResult.swift in Sources */,
 				37A77C602B70320C00435DF5 /* DailyForecastParams.swift in Sources */,
-				37A77CA32B7281A200435DF5 /* CityDetailsViewController.swift in Sources */,
+				37A77CA32B7281A200435DF5 /* LocationDetailsViewController.swift in Sources */,
 				37A77C852B71574400435DF5 /* HourlyForecastServiceProtocol.swift in Sources */,
 				37A77C722B71273E00435DF5 /* HourlyForecastRemote.swift in Sources */,
-				37A77CA12B72818000435DF5 /* CityDetailsViewModel.swift in Sources */,
+				37A77CA12B72818000435DF5 /* LocationDetailsViewModel.swift in Sources */,
 				37A77C912B71605F00435DF5 /* CityInfoAutocomplete.swift in Sources */,
 				37A77C652B70374C00435DF5 /* ApiClient.swift in Sources */,
 				37A77C8E2B71603000435DF5 /* CityInfoAutocompleteServiceProtocol.swift in Sources */,
 				37A77C522B702F6500435DF5 /* ApiValue.swift in Sources */,
 				37A77C8C2B715F7E00435DF5 /* CityInfoAutocompleteParams.swift in Sources */,
 				37A8470F2B6FC04100AE4623 /* AppDelegate.swift in Sources */,
+				378F95FE2B75312000237D18 /* LastLocationsManager.swift in Sources */,
+				37A77D382B74F8B000435DF5 /* CurrentConditionUseCase.swift in Sources */,
+				37A77D2A2B74F4AB00435DF5 /* CurrentConditionService.swift in Sources */,
+				378F95FB2B752C9700237D18 /* LocationWeatherTableViewCell.swift in Sources */,
 				37A77C412B7021E700435DF5 /* SearchCityViewController.swift in Sources */,
 				37A77C9E2B71673C00435DF5 /* SearchCityViewModel.swift in Sources */,
 				37A77C8A2B715F1C00435DF5 /* CityInfoAutocompleteService.swift in Sources */,
+				378F95F52B74FC5E00237D18 /* CurrentCondition.swift in Sources */,
 				37A77C762B71359800435DF5 /* HourlyForecastService.swift in Sources */,
 				37A77C672B70385700435DF5 /* ApiResponse.swift in Sources */,
 				37A77C882B715EC100435DF5 /* CityInfoRemote.swift in Sources */,
 				37A77C3F2B70214B00435DF5 /* MainCoordinator.swift in Sources */,
+				37A77D272B74F2BC00435DF5 /* CurrentConditionRemote.swift in Sources */,
 				37A77C6A2B711FDE00435DF5 /* DataResultService.swift in Sources */,
+				37A77D2C2B74F50400435DF5 /* CurrentConditionParams.swift in Sources */,
 				37A77C932B7160FB00435DF5 /* CityInfo.swift in Sources */,
 				37A77C7D2B71452300435DF5 /* HourlyForecastUseCase.swift in Sources */,
 				37A77C9A2B71637000435DF5 /* CityInfoAutocompleteUseCase.swift in Sources */,
@@ -651,6 +749,8 @@
 				37A847112B6FC04100AE4623 /* SceneDelegate.swift in Sources */,
 				37A77C572B702F9600435DF5 /* ApiHeaders.swift in Sources */,
 				37A77C7B2B7136EC00435DF5 /* HourlyForecast.swift in Sources */,
+				37A77D3A2B74F90E00435DF5 /* CurrentConditionUseCaseProtocol.swift in Sources */,
+				378F96012B753A4700237D18 /* String+matchesRegexp.swift in Sources */,
 				37A77C3D2B70212600435DF5 /* Coordinator.swift in Sources */,
 				37A77C502B702EEF00435DF5 /* BasicUrl.swift in Sources */,
 			);
@@ -831,7 +931,6 @@
 				INFOPLIST_FILE = EmpikTestWeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -860,7 +959,6 @@
 				INFOPLIST_FILE = EmpikTestWeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

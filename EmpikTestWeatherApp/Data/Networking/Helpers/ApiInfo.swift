@@ -32,6 +32,14 @@ struct ApiInfo {
             header: .basicHeader
         )
     }
+    
+    static func currentCondition(locationKey: String) -> ApiValue {
+        .init(
+            path: "/currentconditions/v1/\(locationKey)",
+            requestType: .get,
+            header: .basicHeader
+        )
+    }
 }
 
 private extension ApiValue {

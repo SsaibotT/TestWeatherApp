@@ -8,17 +8,12 @@
 import Foundation
 
 struct CityInfoRemote: Codable {
-    let version: Int
-    let key, type: String
-    let rank: Int
+    let key: String
     let localizedName: String
     let country, administrativeArea: AdministrativeAreaRemote
 
     enum CodingKeys: String, CodingKey {
-        case version = "Version"
         case key = "Key"
-        case type = "Type"
-        case rank = "Rank"
         case localizedName = "LocalizedName"
         case country = "Country"
         case administrativeArea = "AdministrativeArea"

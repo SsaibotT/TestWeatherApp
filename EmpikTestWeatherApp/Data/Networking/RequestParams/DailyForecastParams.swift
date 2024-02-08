@@ -8,7 +8,7 @@
 import Foundation
 
 class DailyForecastParams: BaseRequestParams {
-    init(language: String = LanguageKeys.en, details: Bool = true, isMetric: Bool = true) {
+    init(language: String = LanguageKeys.en, details: Bool = false, isMetric: Bool = true) {
         super.init([
             RequestParamsKeys.language: language,
             RequestParamsKeys.details: details,

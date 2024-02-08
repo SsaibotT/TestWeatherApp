@@ -12,6 +12,6 @@ class BaseRequestParams {
 
     internal init(_ parameters: [String: Any]) {
         self.parameters = parameters
-        self.parameters[RequestParamsKeys.apiKey] = "gQotpC8NwfAQhN13yUBalKRikw3N7XB9"
+        self.parameters[RequestParamsKeys.apiKey] = AppKey.key
     }
 }

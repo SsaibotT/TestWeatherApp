@@ -16,10 +16,16 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let searchCityViewModel = SearchCityViewModel()
-        searchCityViewModel.coordinator = self
+        let searchCityViewModel = SearchCityViewModel(coordinator: self)
         let searchCityViewController = SearchCityViewController(viewModel: searchCityViewModel)
         
         navigationController.pushViewController(searchCityViewController, animated: false)
+    }
+    
+    func locationDetailsScreen(locationData: CityInfo) {
+        let locationDetailsViewModel = LocationDetailsViewModel(coordinator: self, locationData: locationData)
+        let locationDetailsViewController = LocationDetailsViewController(viewModel: locationDetailsViewModel)
+        
+        navigationController.pushViewController(locationDetailsViewController, animated: true)
     }
 }

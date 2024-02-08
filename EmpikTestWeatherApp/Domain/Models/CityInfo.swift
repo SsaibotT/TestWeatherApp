@@ -7,22 +7,21 @@
 
 import Foundation
 
-struct CityInfo {
-    let version: Int
-    let key, type: String
-    let rank: Int
+struct CityInfo: Codable {
+    let key: String
     let localizedName: String
     let country, administrativeArea: AdministrativeArea
+}
+
+struct AdministrativeArea: Codable {
+    let id, localizedName: String
 }
 
 extension CityInfo {
     init?(from remote: CityInfoRemote?) {
         guard let remote = remote else { return nil }
         self.init(
-            version: remote.version,
             key: remote.key,
-            type: remote.type,
-            rank: remote.rank,
             localizedName: remote.localizedName,
             country: AdministrativeArea(from: remote.country),
             administrativeArea: AdministrativeArea(from: remote.administrativeArea)
@@ -31,19 +30,12 @@ extension CityInfo {
     
     static var empty: Self {
         .init(
-            version: 0,
             key: "",
-            type: "",
-            rank: 0,
             localizedName: "",
             country: AdministrativeArea.empty,
             administrativeArea: AdministrativeArea.empty
         )
     }
-}
-
-struct AdministrativeArea {
-    let id, localizedName: String
 }
 
 extension AdministrativeArea {

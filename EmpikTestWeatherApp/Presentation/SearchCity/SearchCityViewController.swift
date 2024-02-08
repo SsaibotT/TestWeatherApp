@@ -50,9 +50,15 @@ class SearchCityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUI()
         configureObservables()
         configureConstraints()
         configureTableView()
+    }
+    
+    private func configureUI() {
+        title = "Search"
+        view.backgroundColor = .white
     }
     
     // MARK: Configure TableView
@@ -141,12 +147,8 @@ extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.locationDetailsIndex.accept(indexPath.row)
+        
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-extension String {
-    func matchesRegex(_ regex: String) -> Bool {
-        return range(of: regex, options: .regularExpression) != nil
     }
 }

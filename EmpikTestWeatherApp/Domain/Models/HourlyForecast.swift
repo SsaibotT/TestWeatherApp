@@ -9,20 +9,13 @@ import Foundation
 
 struct HourlyForecast {
     let dateTime: String
-    let epochDateTime, weatherIcon: Int
     let iconPhrase: String
-    let hasPrecipitation: Bool
-    let precipitationType, precipitationIntensity: String?
-    let isDaylight: Bool
     let temperature: Temperature
-    let precipitationProbability: Int
-    let mobileLink, link: String
 }
 
 struct Temperature {
     let value: Double
     let unit: Unit
-    let unitType: Int
 }
 
 struct Unit {
@@ -34,34 +27,16 @@ extension HourlyForecast {
         guard let remote = remote else { return nil }
         self.init(
             dateTime: remote.dateTime,
-            epochDateTime: remote.epochDateTime,
-            weatherIcon: remote.weatherIcon,
             iconPhrase: remote.iconPhrase,
-            hasPrecipitation: remote.hasPrecipitation,
-            precipitationType: remote.precipitationType,
-            precipitationIntensity: remote.precipitationIntensity,
-            isDaylight: remote.isDaylight,
-            temperature: Temperature(from: remote.temperature),
-            precipitationProbability: remote.precipitationProbability,
-            mobileLink: remote.mobileLink,
-            link: remote.link
+            temperature: Temperature(from: remote.temperature)
         )
     }
     
     static var empty: Self {
         .init(
             dateTime: "",
-            epochDateTime: 0,
-            weatherIcon: 0,
             iconPhrase: "",
-            hasPrecipitation: false,
-            precipitationType: nil,
-            precipitationIntensity: nil,
-            isDaylight: false,
-            temperature: Temperature.empty,
-            precipitationProbability: 0,
-            mobileLink: "",
-            link: ""
+            temperature: Temperature.empty
         )
     }
 }
@@ -70,12 +45,30 @@ extension Temperature {
     init(from remote: TemperatureRemote) {
         self.init(
             value: remote.value,
-            unit: Unit(),
-            unitType: remote.unitType
+            unit: Unit()
         )
     }
     
     static var empty: Self {
-        .init(value: 0.0, unit: Unit(), unitType: 0)
+        .init(value: 0.0, unit: Unit())
+    }
+}
+
+extension HourlyForecast {
+    var convertedDateTime: String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+
+        if let date = dateFormatter.date(from: dateTime) {
+            let outputDateFormatter = DateFormatter()
+            outputDateFormatter.dateFormat = "HH:mm"
+            outputDateFormatter.timeZone = TimeZone(identifier: "GMT+1")
+
+            let outputDateString = outputDateFormatter.string(from: date)
+            
+            return outputDateString
+        }
+        
+        return nil
     }
 }
